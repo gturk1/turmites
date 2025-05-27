@@ -19,10 +19,10 @@ Dragon Curve
 <img src="images/dragon_curve.png" width="500">
 
 Prime Number Sieve
-<img src="images/prime_sieve.png" width="500">
+<img src="images/primes_sieve.png" width="400">
 
 Self-Reproduction
-<img src="images/self_reproduction.png" width="500">
+<img src="images/self_reproduction.png" width="300">
 
 ## Video
 
