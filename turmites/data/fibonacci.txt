@@ -1,0 +1,24 @@
+0.4 0.4
+  
+       f  dg c 
+       f     dg c
+       f        dg
+       f           dg
+       v
+               
+fffffffb    
+fffcfffe   f       
+gffgfgfe        f       
+gffgfdfeg       
+gfcffffe      f
+gfgffgfe  f     
+gfgffdfeg        
+gffcfffe         f 
+gffgfgfe           f    
+gffgfdfeg               
+dffffffe            f    
+fffffgfe     f          
+fffffgfe        f         
+fffffdfeg                              
+  
+

@@ -1,0 +1,69 @@
+f     f             hhhhhhi      
+      f                          c 
+      f                         
+      f     c                   
+      f     b   c                  
+      f     b c b                     
+      f     b b b                        
+      f dg  b b b                     
+      f   dgc c c                     
+      f     dgb b                      
+      f       dgb                     
+      f         dg                    
+      f           dg                    
+
+fffcffe      f                     decrement 3          place arms
+ggfgffe   f                        increment 2
+ggfgffe                f           lengthen forearm A
+gdfgffeg                           jump
+gfcfffe        f                   decrement 4
+gggfffe           f                increment 6
+gggfffe                     i      lengthen forearm B
+gdgfffeg                           jump              
+gffcffe          f                 decrement 5
+ggfgffe       f                    increment 4
+ggfgffe                   i        lengthen B
+gdfgffeg                           jump                 end placing arms
+gfffcfe                        i   decrease B           start copying
+gggggge              f             increase A
+gggggge f                          increment 1
+gggggdeg                           jump
+ggggfce  f                         jump if zero or decrement 1
+gggggge                       i    increase B               
+ggggdgeg                           jump
+ggggcfe    f                       jump if zero or decrement 2
+gggggfe     f                      increment 3
+gggggfe               f            shorten forearm A
+gggggfe                     i      lengthen forearm B
+gggdgfeg                           jump
+ggdffce      f                     jump if zero or decrement 3
+ggfgfge   f                        increment 2
+ggfgfge                f           lengthen forearm A
+ggfgfge                      i     shorten forearm B
+ggfdfgeg                           jump
+ggffcfe        f                   jump if zero or decrement 4
+ggffgfe         f                  increment 5
+ggffgfe                    i       shorten B
+ggffgfe                  f         lengthen A
+gdffgfeg                           jump                 end copying
+gfffffe                f           lengthen forearm A  fix arm lengths
+gcffffe    f                       decrement 2
+ggfgffe     f                      increment 3
+ggfgffe               f            shorten forearm A
+ggfdffeg                           jump
+gfcfffe            f               decrement 6
+gfgfgfe       f                    increment 4
+gfgfgfe                      i     shorten forearm B
+gfgfdfeg                           jump
+gcffffe          f                 decrement 5
+ggffgfe   f                        increment 2
+ggffgfe                 f          shorten A
+ggffdfeg                           jump
+gfcfffe    f                       decrement 2
+gfgfgfe         f                  increment 5
+gfgfdfeg                           jump
+gfffffe               f            shorten forearm A
+gfffcfeg                           jump forward one instruction
+hfffffh                         c  begin execution in newly copied constructor
+d     c                           
+                         ihhhhhh c   

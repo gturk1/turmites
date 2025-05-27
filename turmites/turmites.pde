@@ -611,9 +611,6 @@ void read_grid(String filename)
 {
   int i,j;
   
-  // prepend data file location
-  filename = "../data/" + filename;
-  
   // open the file
   String lines[] = loadStrings(filename);
   if (lines == null) {

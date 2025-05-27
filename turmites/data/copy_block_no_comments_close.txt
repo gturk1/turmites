@@ -1,0 +1,141 @@
+0.3 0.13
+                                  
+                          f     f             hhhhhhi      
+                                f                          c 
+                                f                         
+                                f     c                   
+                                f     b   c                  
+                                f     b c b                     
+                                f     b b b                         
+                                f dg  b b b                     
+                                f   dgc c c                     
+                                f     dgb b                      
+                                f       dgb                     
+                                f         dg                    
+                                f           dg                    
+                                
+                          fffcffe      f                     
+                          ggfgffe   f                        
+                          ggfgffe                f           
+                          gdfgffeg                          
+                          gfcfffe        f                 
+                          gggfffe           f             
+                          gggfffe                     i  
+                          gdgfffeg                      
+                          gffcffe          f           
+                          ggfgffe       f             
+                          ggfgffe                   i        
+                          gdfgffeg                          
+                          gfffcfe                        i 
+                          gggggge              f          
+                          gggggge f                      
+                          gggggdeg                      
+                          ggggfce  f                   
+                          gggggge                       i    
+                          ggggdgeg                          
+                          ggggcfe    f                     
+                          gggggfe     f                   
+                          gggggfe               f        
+                          gggggfe                     i 
+                          gggdgfeg                           
+                          ggdffce      f                    
+                          ggfgfge   f                      
+                          ggfgfge                f           
+                          ggfgfge                      i    
+                          ggfdfgeg                         
+                          ggffcfe        f                
+                          ggffgfe         f              
+                          ggffgfe                    i       
+                          ggffgfe                  f        
+                          gdffgfeg                         
+                          gfffffe                f        
+                          gcffffe    f                   
+                          ggfgffe     f                 
+                          ggfgffe               f            
+                          ggfdffeg                          
+                          gfcfffe            f             
+                          gfgfgfe       f                 
+                          gfgfgfe                      i     
+                          gfgfdfeg                          
+                          gcffffe          f               
+                          ggffgfe   f                     
+                          ggffgfe                 f      
+                          ggffdfeg                      
+                          gfcfffe    f                       
+                          gfgfgfe         f                 
+                          gfgfdfeg                         
+                          gfffffe               f         
+                          gfffcfeg                           
+                          hfffffh                         c 
+                          d  <  c                           
+                                                   ihhhhhh c   
+f     f             hhhhhhi      
+      f                          c 
+      f                         
+      f     c                   
+      f     b   c                  
+      f     b c b                     
+      f     b b b                        
+      f dg  b b b                     
+      f   dgc c c                     
+      f     dgb b                      
+      f       dgb                     
+      f         dg                    
+      f           dg                    
+
+fffcffe      f                     
+ggfgffe   f                        
+ggfgffe                f           
+gdfgffeg                           
+gfcfffe        f                  
+gggfffe           f              
+gggfffe                     i   
+gdgfffeg                       
+gffcffe          f            
+ggfgffe       f              
+ggfgffe                   i        
+gdfgffeg                          
+gfffcfe                        i 
+gggggge              f          
+gggggge f                      
+gggggdeg                      
+ggggfce  f                   
+gggggge                       i    
+ggggdgeg                          
+ggggcfe    f                     
+gggggfe     f                   
+gggggfe               f        
+gggggfe                     i 
+gggdgfeg                     
+ggdffce      f              
+ggfgfge   f                
+ggfgfge                f           
+ggfgfge                      i    
+ggfdfgeg                         
+ggffcfe        f                
+ggffgfe         f              
+ggffgfe                    i       
+ggffgfe                  f        
+gdffgfeg                         
+gfffffe                f           
+gcffffe    f                      
+ggfgffe     f                    
+ggfgffe               f         
+ggfdffeg                       
+gfcfffe            f          
+gfgfgfe       f              
+gfgfgfe                      i     
+gfgfdfeg                          
+gcffffe          f               
+ggffgfe   f                     
+ggffgfe                 f      
+ggffdfeg                      
+gfcfffe    f                       
+gfgfgfe         f                 
+gfgfdfeg                         
+gfffffe               f         
+gfffcfeg                       
+hfffffh                         c  
+d     c                           
+                         ihhhhhh c   
+                       
