@@ -12,17 +12,17 @@ The code was written for myself, and as such it has a fairly poor user interface
 
 ## Still Figures of Some Vants and Turmites
 
-![The pattern created by Langton's original Vant](images/langton_vant.jpg)
+![The pattern created by Langton's original Vant](images/langton_vant.png)
 
-![Dragon Curve made by Turmite](images/dragon_curve.jpg)
+![Dragon Curve made by Turmite](images/dragon_curve.png)
 
-![Prime Sieve](images/prime_sieve.jpg)
+![Prime Sieve](images/prime_sieve.png)
 
-![Self-Reproduction](images/self_reproduction.jpg)
+![Self-Reproduction](images/self_reproduction.png)
 
 ## Video
 
-[Watch the turmite video (MP4)](media/turmites_movie.mp4)
+[Watch the turmite video (MP4)](media/turmite_movie.mp4)
 
 ## Updates
 
