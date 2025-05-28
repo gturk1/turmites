@@ -4,8 +4,7 @@ Vants and Turmites are 2D versions of Turing machines. They make patterns on a 2
 
 This repository contains the code that created the figures and animation for my Artificial Life paper on the topic. The repository also contains the video that was created to accompany the paper. The paper was recently accepted by the journal, so I anticipate the paper will be published in late 2025 or in 2026.
 
-Greg Turk
-Georgia Institute of Technology
+Greg Turk, Georgia Institute of Technology
 
 ## Paper Abstract
 
@@ -33,7 +32,7 @@ Self-Reproduction
 
 ## How to Run the Code
 
-This code is written in Processing / Java. The code was written for myself, and as such it has a fairly poor user interface (keyboard commands only).
+This code is written in Processing / Java. The code was written for myself, and as such it has a fairly poor user interface, namely keyboard commands only.
 
 1. Open `turmites/turmites.pde` in the [Processing IDE](https://processing.org/).
 2. Press the  **Run** button.  This should show you the help screen.
