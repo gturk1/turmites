@@ -1,7 +1,7 @@
 // process keyboard events
 
 void keyPressed() {
-  
+
   // any key press will get us out of "help" mode
   if (show_help) {
     show_help = false;
@@ -10,9 +10,9 @@ void keyPressed() {
   }
 
   if (key == CODED) {
-    
+
     int shift = (int) (gx / 16.0);  // arrows shift 1/8 of screen width
-    
+
     if (keyCode == LEFT) {
       //println ("left");
       x_shift -= shift;
@@ -34,15 +34,15 @@ void keyPressed() {
       draw_all();
     }
     return;
-  }  
-  
+  }
+
   if (key == ' ') {  // toggle simulation
     simulate_flag = !simulate_flag;
     draw_all();
   }
-  else if (key == '?') { 
+  else if (key == '?') {
     show_help = !show_help;
-    draw_all();  
+    draw_all();
   }
   else if (key == 's') {  // single step
     simulate_flag = false;
@@ -165,10 +165,10 @@ void keyPressed() {
     new_vant_rule ("BRL", 1);
   }
   else if (key == '6') {   // spiral that Dewdney published
-  
+
     new_turmite_rule (1, "Lb1 Fa2");
     new_turmite_rule (2, "Rb1 Rb1");
-    
+
     draw_freq = 1000;
     set_grid_size (2);
     start_direction = 0;
@@ -178,7 +178,7 @@ void keyPressed() {
     init_all();
   }
   else if (key == '7') {    // Dragon curve
-    
+
     //                     a   b   c   d   e   f   g
     new_turmite_rule (1, "Fg2 --- --- --- --- --- ---");
     new_turmite_rule (2, "Rb7 --- --- --- --- --- ---");
@@ -187,18 +187,18 @@ void keyPressed() {
     new_turmite_rule (5, "Bc4 Rb5 Lc5 Fd5 --- --- ---");
     new_turmite_rule (6, "Bb4 Rb6 Lc6 Fd6 --- --- ---");
     new_turmite_rule (7, "Bd4 Rb7 Lc7 Fd7 --- --- ---");
-    
+
     draw_freq = 1000;
     set_grid_size (5);
     start_direction = 3;
     x_start_fract = 0.76;
     y_start_fract = 0.345;
     calculate_start_position();
-    
+
     init_all();
   }
   else if (key == '8') {    // Prime number sieve (spawns many turmites)
-    
+
     //                       a     b    c     d    e
     new_turmite_rule (1,  "Fa2F4  Fb6  ----  Fd1  Fe6");  // initiate "e" on diagonal and "b" in row along bottom
     new_turmite_rule (2,  "La3    ---- ---- ---- ----");  // make diagonal "e"
@@ -242,14 +242,14 @@ void keyPressed() {
     start_direction = 0;
     calculate_start_position (0.5, 0.5);
     read_grid ("fibonacci.txt");
-    
+
     draw_all();
   }
   else if (key == '0') {   // universal constructor that simulates RL machine
     init_all();
-    
+
     set_universal_rules();
-    
+
     draw_freq = 1000;
     set_grid_size (10);
     set_init_state (1);
@@ -260,43 +260,43 @@ void keyPressed() {
 
     // simulate RL vant
     read_grid ("rl_simulator.txt");
-    
+
     draw_all();
   }
   else if (key == '-') {  // universal constructor, performing self-reproduction (closes-up)
     init_all();
-    
+
     set_universal_rules();
-    
+
     x_start_fract = 0.5;
     y_start_fract = 0.8;
     calculate_start_position();
 
     // self-reproduction
-    
+
     draw_freq = 1000;
     set_grid_size (5);
     set_init_state (3);
     read_grid ("copy_block_no_comments_close.txt");
-    
+
     draw_all();
   }
   else if (key == '=') {  // universal constructor, performing self-reproduction
     init_all();
-    
+
     set_universal_rules();
-    
+
     x_start_fract = 0.5;
     y_start_fract = 0.8;
     calculate_start_position();
 
     // self-reproduction
-    
+
     draw_freq = 10000;
     set_grid_size (3);
     set_init_state (3);
     read_grid ("copy_block_no_comments.txt");
-        
+
     draw_all();
   }
   else if (key == '!') {  // spread of infectious disease
@@ -308,6 +308,7 @@ void keyPressed() {
   else if (key == 'q' || key == 'Q') {
     exit();
   }
+  print_rule_in_edpeggjr_format();
 }
 
 void set_universal_rules()
