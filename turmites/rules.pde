@@ -400,11 +400,12 @@ void print_rule_in_golly_format()
   dirs[Right] = 2;
   dirs[Back] = 4;
   dirs[Left] = 8;
+
   for (int s = 0; s < num_states; s++) {
     for (int c = 0; c < num_colors; c++) {
       if (spawn_dir[s][c] >= 0 ) {
         // TODO: support spawning turmites where the format supports it
-        print("Rule has spawning turmites, not currently supported.\n");
+        print("Golly format: Rule has spawning turmites, not currently supported.\n");
         return;
       }
     }
