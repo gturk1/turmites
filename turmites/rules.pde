@@ -393,8 +393,13 @@ void print_rules_used()
   }
 }
 
-void print_rule_in_edpeggjr_format()
+void print_rule_in_golly_format()
 {
+  int dirs[] = new int[4];
+  dirs[Forward] = 1;
+  dirs[Right] = 2;
+  dirs[Back] = 4;
+  dirs[Left] = 8;
   for (int s = 0; s < num_states; s++) {
     for (int c = 0; c < num_colors; c++) {
       if (spawn_dir[s][c] >= 0 ) {
@@ -404,7 +409,7 @@ void print_rule_in_edpeggjr_format()
       }
     }
   }
-  print ("{");
+  print ("Rule in Golly format: {");
   for (int s = 0; s < num_states; s++) {
     print("{");
     for (int c = 0; c < num_colors; c++) {
@@ -412,8 +417,8 @@ void print_rule_in_edpeggjr_format()
         print("{0,0,0}"); // dummy rule
       }
       else {
-        print("{", rule_cell[s][c], ",", rule_dir[s][c], ",", rule_state[s][c], "}");
-        // TODO: translate dir into correct format
+        int golly_dir = dirs[rule_dir[s][c]];
+        print("{", rule_cell[s][c], ",", golly_dir, ",", rule_state[s][c], "}");
       }
       if (c < num_colors - 1) {
         print(",");

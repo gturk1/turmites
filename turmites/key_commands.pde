@@ -308,7 +308,7 @@ void keyPressed() {
   else if (key == 'q' || key == 'Q') {
     exit();
   }
-  print_rule_in_edpeggjr_format();
+  print_rule_in_golly_format();
 }
 
 void set_universal_rules()
