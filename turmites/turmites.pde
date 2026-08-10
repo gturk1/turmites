@@ -172,6 +172,7 @@ void setup()
   
   // start on help screen
   show_help = true;
+  
   draw_all();
   
 }

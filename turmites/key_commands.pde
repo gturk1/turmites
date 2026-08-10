@@ -2,8 +2,8 @@
 
 void keyPressed() {
 
-  // any key press will get us out of "help" mode
-  if (show_help) {
+  // any key press except SHIFT will get us out of "help" mode
+  if (show_help && keyCode != SHIFT) {
     show_help = false;
     draw_all();
     return;
@@ -90,6 +90,8 @@ void keyPressed() {
     println ("Writing out movie frames.");
     write_frames = true;
     draw_all();
+  }  else if (key == 'G') {
+    print_rule_in_golly_format();
   }
   else if (key == 'd') {
     draw_freq = 1;
@@ -308,7 +310,7 @@ void keyPressed() {
   else if (key == 'q' || key == 'Q') {
     exit();
   }
-  print_rule_in_golly_format();
+
 }
 
 void set_universal_rules()

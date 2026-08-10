@@ -179,6 +179,7 @@ String[] help_1 = {
   "arrows : move position in grid", 
   "w : write a snapshot of the currently displayed image to a file",
   "m : prepare to write out many image files, for movie creation",
+  "G : print Golly rule to console",
   "q : quit program",
   "",
   "Vant and Turmite Selection:",
