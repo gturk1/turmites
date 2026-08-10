@@ -61,14 +61,14 @@ void advance_sim()
         simulate_flag = false;
     }
   }
-  
+
   // for figuring out how many steps for self-reproduction
   //if (sim_step == 7544430) {
   //  simulate_flag = false;
   //  println ("self-reproduction has been halted");
   //  draw_all();
   //}
-  
+
   sim_step++;
 }
 
@@ -85,7 +85,7 @@ boolean advance_turmite(Turmite tur)
 {
   int dx = 0;
   int dy = 0;
-  
+
   int mite_x = tur.x;
   int mite_y = tur.y;
   int mite_dir = tur.dir;
@@ -95,7 +95,7 @@ boolean advance_turmite(Turmite tur)
 
   // mark the current position as having been visited
   visited[mite_x][mite_y] = 1;
-  
+
   // grab appropriate values from the rule table
   int cell_type  = grid[mite_x][mite_y];
   int dir_change = rule_dir[mite_state][cell_type];
@@ -103,31 +103,31 @@ boolean advance_turmite(Turmite tur)
   int next_cell  = rule_cell[mite_state][cell_type];
   int new_spawn_dir = spawn_dir[mite_state][cell_type];
   int new_spawn_state = spawn_state[mite_state][cell_type];
-  
+
   // mark that this rule has been used
   rule_used[mite_state][cell_type] = 1;
-  
+
   // check to see if turmite should be halted
   if (dir_change == Halt) {
     println ("halt");
     draw_cell (mite_x, mite_y);
     return (false);
-  } 
+  }
 
   // save the old position and direction
   int x_old = mite_x;
   int y_old = mite_y;
   int old_mite_dir = mite_dir;
-  
+
   // update the direction of the turmite
   mite_dir = mite_dir + dir_change;
   while (mite_dir >= 4) mite_dir -= 4;
   while (mite_dir < 0) mite_dir += 4;
-    
+
   // update grid value and turmite state
   grid[mite_x][mite_y] = next_cell;
   mite_state = next_state;
-    
+
   // figure out change in position based on direction
   if (mite_dir == 0) {
     dy = -1;
@@ -141,14 +141,14 @@ boolean advance_turmite(Turmite tur)
   if (mite_dir == 3) {
     dx = 1;
   }
-  
+
   // update to new position
   mite_x += dx;
   mite_y += dy;
-  
+
   // check for turmite going off grid
   if (stay_on_screen) {
-    
+
     int mx = mite_x - x_shift;
     int my = mite_y - y_shift;
 
@@ -169,7 +169,7 @@ boolean advance_turmite(Turmite tur)
         return (false);
       }
     }
-  
+
   }
 
   if (!stay_on_screen &&
@@ -183,7 +183,7 @@ boolean advance_turmite(Turmite tur)
   tur.y = mite_y;
   tur.dir = mite_dir;
   tur.state = mite_state;
-  
+
   // maybe spawn a new turmite
   if (new_spawn_dir >= 0) {
     println ("New turmite created");
@@ -198,16 +198,16 @@ boolean advance_turmite(Turmite tur)
   if (draw_freq == 1) {
     // draw the old cell the turmite moved from
     draw_cell (x_old, y_old);
-    
+
     // draw the cell that the turmite has moved to
     draw_cell (mite_x, mite_y);
-    
+
     // show the turmite's state
     if (show_sidebar) {
       draw_sidebar();
       show_state();
     }
-    
+
     // draw the turmite
     if (show_turmite)
       draw_turmite (tur);
@@ -221,7 +221,7 @@ boolean advance_turmite(Turmite tur)
     if (y < y0_draw) y0_draw = y;
     if (y > y1_draw) y1_draw = y;
   }
-  
+
   // signal that the turmite is okay (has not halted or gone off the grid)
   return (true);
 }
@@ -255,13 +255,13 @@ void new_vant_rule (String str, int cycle_offset)
 {
   //println ("string length = " + str.length());
   char[] str_array = str.toCharArray();
-  
+
   // set the next state, cell type, and direction for the current cell type
-  
+
   for (int i = 0; i < str.length(); i++) {
-    
+
     rule_state[0][i] = 0;  // stay in state zero
-    
+
     // set the next state, based on the current cell value
     if (i < str.length() - 1) {
       rule_cell[0][i] = i + 1;
@@ -269,22 +269,22 @@ void new_vant_rule (String str, int cycle_offset)
     else {
       rule_cell[0][i] = cycle_offset;
     }
-    
+
     // the string defines what the next turn will be
     char c = Character.toLowerCase(str_array[i]);
     rule_dir[0][i] = get_direction_code (c);
-    
+
     // vants do not spawn new vants (currently)
     spawn_dir[0][i] = -1;
     spawn_state[0][i] = 0;
-    
+
     // mark each part of rule as unused
     rule_used[0][i] = 0;
   }
-  
+
   num_states = 1;
   num_colors = str.length();
-  
+
 //  println ("num states = " + num_states);
 //  println ("num colors = " + num_colors);
 
@@ -297,13 +297,13 @@ void new_vant_rule (String str, int cycle_offset)
 void new_turmite_rule (int state_num, String str)
 {
   state_num = state_num - 1;
-  
+
   //println();
   //println ("rules for state number " + state_num);
-  
-  // split the rule string using one or more spaces as the separator  
+
+  // split the rule string using one or more spaces as the separator
   String[] parts = str.split(" +");
-  
+
   for (int cell_val = 0; cell_val < parts.length; cell_val++) {
     String word = parts[cell_val];
 //    println (word);
@@ -315,10 +315,10 @@ void new_turmite_rule (int state_num, String str)
 
     int new_cell = Character.toLowerCase(word.charAt(1)) - 'a';
     int new_state = word.charAt(2) - '0';
-    
+
     // States may be one or two digits, which complicates the rule string parsing.
     // Also the turmite may spawn another, which makes the rule string longer still.
-    
+
     // handle case where state is two digits
     int next_char = 3;
     if (word.length() > 3) {
@@ -333,7 +333,7 @@ void new_turmite_rule (int state_num, String str)
     // handle case where a new turmite is spawned
     int new_spawn_dir = -1;
     int new_spawn_state = 1;
-    
+
     if (word.length() > 4) {
       println ("New turmite rule");
       c = Character.toLowerCase(word.charAt(next_char));
@@ -355,11 +355,11 @@ void new_turmite_rule (int state_num, String str)
     //println ("dir = " + new_dir);
     //println ("cell = " + new_cell);
     //println ("state = " + new_state);
-    
+
     // states in rules start at 1, but are stored starting at 0
     new_state -= 1;
     new_spawn_state -= 1;
-    
+
     // add this rule to the table
     rule_dir[state_num][cell_val] = new_dir;
     rule_cell[state_num][cell_val] = new_cell;
@@ -368,7 +368,7 @@ void new_turmite_rule (int state_num, String str)
     spawn_state[state_num][cell_val] = new_spawn_state;
     rule_used[state_num][cell_val] = 0;
   }
-  
+
   num_states = state_num + 1;
   num_colors = parts.length;
 }
@@ -377,13 +377,13 @@ void new_turmite_rule (int state_num, String str)
 void print_rules_used()
 {
   println();
-  
+
   print ("    ");
   for (int c = 0; c < num_colors; c++) {
     print (char(c + int('a')) + " ");
   }
   println();
-  
+
   for (int s = 0; s < num_states; s++) {
     print (String.format("%2d  ", s+1));
     for (int c = 0; c < num_colors; c++) {
@@ -391,4 +391,44 @@ void print_rules_used()
     }
     println();
   }
+}
+
+void print_rule_in_golly_format()
+{
+  int dirs[] = new int[4];
+  dirs[Forward] = 1;
+  dirs[Right] = 2;
+  dirs[Back] = 4;
+  dirs[Left] = 8;
+
+  for (int s = 0; s < num_states; s++) {
+    for (int c = 0; c < num_colors; c++) {
+      if (spawn_dir[s][c] >= 0 ) {
+        // TODO: support spawning turmites where the format supports it
+        print("Golly format: Rule has spawning turmites, not currently supported.\n");
+        return;
+      }
+    }
+  }
+  print ("Rule in Golly format: {");
+  for (int s = 0; s < num_states; s++) {
+    print("{");
+    for (int c = 0; c < num_colors; c++) {
+      if ( rule_cell[s][c] < 0 ) {
+        print("{0,0,0}"); // dummy rule
+      }
+      else {
+        int golly_dir = dirs[rule_dir[s][c]];
+        print("{", rule_cell[s][c], ",", golly_dir, ",", rule_state[s][c], "}");
+      }
+      if (c < num_colors - 1) {
+        print(",");
+      }
+    }
+    print("}");
+    if (s < num_states - 1) {
+      print(",");
+    }
+  }
+  print ("}\n");
 }
