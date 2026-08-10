@@ -12,13 +12,13 @@ The two-dimensional Turing machine is a promising but under-used simulation tool
 
 ## Full Paper
 
-[PDF of Full Paper] (vants_and_turmites_2025.pdf)
+[PDF of Full Paper](vants_and_turmites_2025.pdf)
 
 ## Video for Paper
 
 In order to watch the accompanying video for the paper, download the MP4 file and play it locally on your computer.  The file is 16 MB in size.
 
-[The turmite video (MP4)](media/turmite_movie.mp4)
+[The turmite video (MP4)](media/turmite%20movie.mp4)
 
 ## Figures of Some Vant and Turmite Patterns
 
