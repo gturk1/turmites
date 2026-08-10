@@ -10,6 +10,10 @@ Greg Turk, Georgia Institute of Technology
 
 The two-dimensional Turing machine is a promising but under-used simulation tool for Artificial Life. Single-state 2D Turing machines exhibit a variety of interesting behaviors, some of which have already been explored. Multi-state 2D Turing machines, despite their potential for simulating even more diverse behaviors, have received little attention to date. We demonstrate the potential of such automata for studying biological phenomena by showing how they can be used to simulate self-similar growth, the spread of disease, and self-reproduction. Some of the results presented here are from investigations that were performed around the time of [Dewdney 1989], but they have not been published until now.
 
+## Full Paper
+
+[PDF of Full Paper] (vants_and_turmites_2025.pdf)
+
 ## Video for Paper
 
 In order to watch the accompanying video for the paper, download the MP4 file and play it locally on your computer.  The file is 16 MB in size.
